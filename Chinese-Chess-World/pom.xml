@@ -21,6 +21,7 @@
         <java.version>11</java.version>
 
         <spring-cloud.version>2020.0.1</spring-cloud.version>
+        <spring-cloud-config-client.version>3.0.2</spring-cloud-config-client.version>
     </properties>
 
     <modules>
@@ -28,6 +29,24 @@
         <module>ccw-user-management-service</module>
         <module>ccw-config-service</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-config-client</artifactId>
+                <version>${spring-cloud-config-client.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

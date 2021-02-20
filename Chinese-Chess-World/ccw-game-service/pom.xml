@@ -11,14 +11,8 @@
 
     <artifactId>chinese-chess-game-service</artifactId>
     <version>1.0</version>
-    <name>ccw-chinese-chess-game</name>
+    <name>ccw-game-service</name>
     <description>Chinese Chess Game service</description>
-
-    <properties>
-        <java.version>11</java.version>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-    </properties>
 
     <dependencies>
         <dependency>
