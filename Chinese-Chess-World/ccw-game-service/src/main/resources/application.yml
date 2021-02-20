@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ccgame?useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: ccgame
+    password: ccgame
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework: info
+ccgame:
+  auth:
+    tokenSecret: 926D96C90030DD58429D2751AC1BDBBC
+    tokenExpirationMs: 86400000 # One day
+  mvc:
+    allowedOrigins:
+      - "http://localhost:3000"
+      - "http://127.0.0.1:3000"
+  stomp:
+    disconnectDelay: 900 # 30 * 30
+    httpMessageCacheSize: 1000
+    streamBytesLimit: 524288 # 512 * 1024
