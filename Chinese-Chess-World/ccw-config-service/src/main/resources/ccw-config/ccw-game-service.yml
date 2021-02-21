@@ -1,16 +1,18 @@
+server:
+  port: 8001
+
 spring:
   datasource:
+    driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/ccgame?useLegacyDatetimeCode=false&serverTimezone=UTC
     username: ccgame
     password: ccgame
+
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     database: mysql
     hibernate:
       ddl-auto: update
-
-server:
-  port: 8080
 
 logging:
   level:

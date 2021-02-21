@@ -6,20 +6,23 @@
     <parent>
         <groupId>com.doubleat.ccw</groupId>
         <artifactId>ccw-platform</artifactId>
-        <version>1.0</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>user-management-service</artifactId>
-    <version>1.0</version>
+    <artifactId>ccw-user-management-service</artifactId>
+    <version>${ccw-user-management-service.version}</version>
     <name>ccw-user-management-service</name>
     <description>Service for management users</description>
 
     <dependencies>
+        <!-- Contract service -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>com.doubleat.ccw</groupId>
+            <artifactId>ccw-user-management-service-contract</artifactId>
         </dependency>
 
+        <!-- Testing -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -27,8 +30,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-client</artifactId>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

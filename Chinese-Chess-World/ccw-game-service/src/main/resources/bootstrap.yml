@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: ccw-game-eservice
+
+  profiles:
+    active: native
+
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+---
+spring:
+  config:
+    activate:
+      on-profile: native
+
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  cloud:
+    config:
+      uri: http://localhost:8888

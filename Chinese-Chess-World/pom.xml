@@ -12,7 +12,7 @@
 
     <groupId>com.doubleat.ccw</groupId>
     <artifactId>ccw-platform</artifactId>
-    <version>1.0</version>
+    <version>${revision}</version>
     <packaging>pom</packaging>
     <name>ccw-platform</name>
     <description>Chinese Chess World service</description>
@@ -20,24 +20,79 @@
     <properties>
         <java.version>11</java.version>
 
+        <revision>1.0</revision>
+
+        <ccw-common.version>1.0</ccw-common.version>
+        <ccw-config-service.version>1.0</ccw-config-service.version>
+
+        <!-- Service version -->
+        <ccw-user-management-service.version>1.0</ccw-user-management-service.version>
+        <ccw-game-service.version>1.0</ccw-game-service.version>
+
+        <!-- Contract Service version -->
+        <ccw-user-management-service-contract.version>1.0</ccw-user-management-service-contract.version>
+        <ccw-game-service-contract.version>1.0</ccw-game-service-contract.version>
+
+        <!-- Spring cloud version -->
         <spring-cloud.version>2020.0.1</spring-cloud.version>
-        <spring-cloud-config-client.version>3.0.2</spring-cloud-config-client.version>
+        <spring-cloud-config.version>3.0.2</spring-cloud-config.version>
+
+        <!-- Testing -->
     </properties>
 
     <modules>
-        <module>ccw-game-service</module>
-        <module>ccw-user-management-service</module>
+        <module>ccw-common</module>
+
         <module>ccw-config-service</module>
+
+        <module>ccw-game-service-contract</module>
+        <module>ccw-game-service</module>
+
+        <module>ccw-user-management-service</module>
+        <module>ccw-user-management-service-contract</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
+            <!-- Internal service -->
             <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-config-client</artifactId>
-                <version>${spring-cloud-config-client.version}</version>
+                <groupId>com.doubleat.ccw</groupId>
+                <artifactId>ccw-common</artifactId>
+                <version>${ccw-common.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.doubleat.ccw</groupId>
+                <artifactId>ccw-config-service</artifactId>
+                <version>${ccw-config-service.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.doubleat.ccw</groupId>
+                <artifactId>ccw-game-service</artifactId>
+                <version>${ccw-game-service.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.doubleat.ccw</groupId>
+                <artifactId>ccw-user-management-service</artifactId>
+                <version>${ccw-user-management-service.version}</version>
+            </dependency>
+
+            <!-- Internal contract service -->
+            <dependency>
+                <groupId>com.doubleat.ccw</groupId>
+                <artifactId>ccw-user-management-service-contract</artifactId>
+                <version>${ccw-user-management-service-contract.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.doubleat.ccw</groupId>
+                <artifactId>ccw-game-service-contract</artifactId>
+                <version>${ccw-game-service-contract.version}</version>
+            </dependency>
+
+            <!-- Spring cloud -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
