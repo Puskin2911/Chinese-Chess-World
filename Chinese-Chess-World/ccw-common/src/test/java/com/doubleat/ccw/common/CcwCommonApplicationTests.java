@@ -1,4 +1,4 @@
-package com.doubleat.ccw.ccwcommon;
+package com.doubleat.ccw.common;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
