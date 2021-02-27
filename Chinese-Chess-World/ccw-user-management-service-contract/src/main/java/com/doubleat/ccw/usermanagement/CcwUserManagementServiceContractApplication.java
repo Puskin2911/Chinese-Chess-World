@@ -1,4 +1,4 @@
-package com.doubleat.ccw.ccwusermanagementservicecontract;
+package com.doubleat.ccw.usermanagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,10 +1,10 @@
-package com.doubleat.ccw.ccwusermanagementservicecontract;
+package com.doubleat.ccw.usermanagement;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CcwUserManagementServiceContractApplicationTests {
+class CcwGameServiceContractApplicationTests {
 
     @Test
     void contextLoads() {
