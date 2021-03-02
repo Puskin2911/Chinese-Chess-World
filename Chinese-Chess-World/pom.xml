@@ -29,7 +29,7 @@
         <ccw-user-management-service.version>1.0</ccw-user-management-service.version>
         <ccw-game-service.version>1.0</ccw-game-service.version>
 
-        <!-- Contract Service version -->
+        <!-- Contract service version -->
         <ccw-user-management-service-contract.version>1.0</ccw-user-management-service-contract.version>
         <ccw-game-service-contract.version>1.0</ccw-game-service-contract.version>
 
@@ -37,7 +37,8 @@
         <spring-cloud.version>2020.0.1</spring-cloud.version>
         <spring-cloud-config.version>3.0.2</spring-cloud-config.version>
 
-        <!-- Testing -->
+        <!-- Swagger version -->
+        <swagger.version>3.0.0</swagger.version>
     </properties>
 
     <modules>
@@ -100,16 +101,20 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- Swagger -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
