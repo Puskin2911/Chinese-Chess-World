@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ccw-game-eservice
+    name: ccw-game-service
 
   profiles:
     active: native

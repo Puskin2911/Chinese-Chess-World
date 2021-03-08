@@ -1,13 +1,13 @@
-package com.doubleat.ccw.usermanagement;
+package com.doubleat.ccgame;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CcwGameServiceContractApplication {
+public class GameApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CcwGameServiceContractApplication.class, args);
+        SpringApplication.run(GameApplication.class, args);
     }
 
 }
